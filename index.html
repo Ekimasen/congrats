@@ -7,12 +7,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="confetti"></div>
     <div class="container">
         <div class="avatar">
-            <img src="avatar.png" alt="Avatar">
+            <img src="ivon.jpg" alt="Avatar">
         </div>
         <h1>Congratulations!</h1>
-        <p>You did an amazing job!</p>
+        <p>May work ka na!</p>
+        <button id="celebrateBtn">Celebrate 🎉</button>
     </div>
+
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎉Let's Celebrate!🎉</h2>
+            <p>Congrats sayo, ingat ka dyan sa work mo. Patience is the key lang HAHAHAH</p>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("popup");
+        var btn = document.getElementById("celebrateBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
